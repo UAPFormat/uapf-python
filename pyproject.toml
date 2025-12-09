@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uapf-parser"
+version = "0.1.0"
+description = "Python parser and validator for UAPF packages"
+authors = [{ name = "UAPF Contributors" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "jsonschema>=4.0.0",
+  "click>=8.0.0"
+]
+
+[project.scripts]
+uapf = "uapf_parser.cli:cli"
+
+[tool.setuptools]
+packages = ["uapf_parser"]
